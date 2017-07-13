@@ -314,6 +314,89 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="Enh_centerPosition";
+			expression="missionNamespace setVariable ['Enh_centerPosition',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=3;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=12323;
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=1943;
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"SCALAR"
+									};
+								};
+								value=0;
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="Enh_displayText";
+			expression="missionNamespace setVariable ['Enh_displayText',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="Kinduf Airbase, Lythium";
+				};
+			};
+		};
+		class Attribute2
+		{
 			property="cba_settings_hash";
 			expression="false";
 			class Value
@@ -986,7 +1069,64 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
+		class Attribute3
+		{
+			property="'Enh_altitude'";
+			expression="missionNamespace setVariable ['Enh_altitude',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=400;
+				};
+			};
+		};
+		class Attribute4
+		{
+			property="Enh_ambientFlyby_speed";
+			expression="missionNamespace setVariable ['Enh_ambientFlyby_speed',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="LIMITED";
+				};
+			};
+		};
+		class Attribute5
+		{
+			property="Enh_establisingShot_activate";
+			expression="				if (!is3DEN && _value && hasInterface) then				{					[] spawn					{						waitUntil {time > 0.005};						[							missionNamespace getVariable 'Enh_centerPosition',							missionNamespace getVariable 'Enh_displayText',							missionNamespace getVariable 'Enh_altitude',							missionNamespace getVariable 'Enh_radius',							missionNamespace getVariable 'Enh_viewingAngle'						] call BIS_fnc_establishingShot;					};				};			";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute6
 		{
 			property="EnableDebugConsole";
 			expression="true";
@@ -1005,7 +1145,26 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute7
+		{
+			property="Enh_radius";
+			expression="missionNamespace setVariable ['Enh_radius',_value]";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=200;
+				};
+			};
+		};
+		nAttributes=8;
 	};
 };
 class Mission
