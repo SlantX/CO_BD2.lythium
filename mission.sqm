@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1212;
+		nextID=1240;
 	};
 	class MarkerIDProvider
 	{
-		nextID=18;
+		nextID=19;
 	};
 	class LayerIndexProvider
 	{
-		nextID=144;
+		nextID=160;
 	};
 	class Camera
 	{
-		pos[]={15103.069,80.086082,4287.501};
-		dir[]={0.24895966,-0.31777143,0.91495407};
-		up[]={0.08343944,0.9481557,0.30664918};
-		aside[]={0.96496844,-1.1945667e-007,-0.26256907};
+		pos[]={16931.68,102.75349,5439.6035};
+		dir[]={-0.76637602,-0.637299,0.082073003};
+		up[]={-0.63374162,0.77054906,0.067866385};
+		aside[]={0.10648947,-2.468747e-006,0.99442095};
 	};
 };
 binarizationWanted=0;
@@ -73,13 +73,15 @@ addons[]=
 	"Jbad_misc_market",
 	"CUP_Misc3_Config",
 	"A3_Props_F_Exp_Commercial_Market",
-	"rhs_c_heavyweapons"
+	"rhs_c_heavyweapons",
+	"A3_Structures_F_Wrecks",
+	"CUP_CAStructures_E_Misc_Misc_Construction"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=42;
+		items=44;
 		class Item0
 		{
 			className="ace_advanced_ballistics";
@@ -360,6 +362,18 @@ class AddonsMetaData
 			name="Heavy weapons pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
+		};
+		class Item42
+		{
+			className="A3_Structures_F_Wrecks";
+			name="Arma 3 - Vehicle Wrecks";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item43
+		{
+			className="CUP_CAStructures_E_Misc_Misc_Construction";
+			name="CUP_CAStructures_E_Misc_Misc_Construction";
 		};
 	};
 };
@@ -1356,7 +1370,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=92;
+		items=101;
 		class Item0
 		{
 			dataType="Layer";
@@ -5181,14 +5195,14 @@ class Mission
 		class Item11
 		{
 			dataType="Marker";
-			position[]={17292.525,0,5882.3149};
+			position[]={17331.854,1.9316406,5972.48};
 			name="marker_14";
 			text="LZ BREWERY";
 			type="mil_end";
 			colorName="ColorWEST";
 			angle=179.55612;
 			id=959;
-			atlOffset=-31.916063;
+			atlOffset=-31.624577;
 		};
 		class Item12
 		{
@@ -18724,7 +18738,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17261.154,40.176144,5946.1377};
-				angles[]={-0,4.5560665,0};
+				angles[]={0,4.5560665,0};
 			};
 			side="East";
 			flags=4;
@@ -18762,6 +18776,338 @@ class Mission
 			{
 			};
 			id=1210;
+		};
+		class Item92
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16861.211,29.133144,5424.374};
+				angles[]={0.00076794485,0,6.256464};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1212;
+			type="Land_Wreck_Truck_F";
+		};
+		class Item93
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16833.699,28.740744,5436.6147};
+				angles[]={0.00059801998,3.0850258,6.2825875};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1213;
+			type="Land_Misc_IronPipes_EP1";
+		};
+		class Item94
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16837.146,29.311634,5452.1816};
+				angles[]={5.9303646,0,6.278194};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1214;
+			type="Land_Misc_Rubble_EP1";
+		};
+		class Item95
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16837.938,28.970871,5436.9243};
+				angles[]={0.00059801998,0,6.2825875};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1215;
+			type="Land_Misc_Coil_EP1";
+		};
+		class Item96
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={16841.184,29.538837,5451.9116};
+				angles[]={5.8638535,4.0734787,6.2687049};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=1216;
+			type="Land_Misc_IronPipes_EP1";
+		};
+		class Item97
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=5;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16827.934,29.336269,5454.0498};
+						angles[]={0,2.4717352,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=1225;
+					type="LOP_Tak_Civ_Random";
+					atlOffset=-1.9073486e-006;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+				class Item1
+				{
+					dataType="Waypoint";
+					position[]={16833.445,29.677769,5454.4448};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1227;
+					type="Move";
+					atlOffset=-0.00010299683;
+				};
+				class Item2
+				{
+					dataType="Waypoint";
+					position[]={16821.877,31.885092,5464.4067};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1228;
+					type="Move";
+					atlOffset=-3.4332275e-005;
+				};
+				class Item3
+				{
+					dataType="Waypoint";
+					position[]={16822.908,29.036304,5453.5093};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1229;
+					type="Move";
+					atlOffset=-1.335144e-005;
+				};
+				class Item4
+				{
+					dataType="Waypoint";
+					position[]={16827.67,29.127502,5453.5049};
+					type="Cycle";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+					id=1230;
+					atlOffset=-1.9073486e-006;
+				};
+			};
+			class Attributes
+			{
+				behaviour="CARELESS";
+			};
+			id=1224;
+			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="acex_headless_blacklist";
+					expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item98
+		{
+			dataType="Marker";
+			position[]={21337.553,-4.5830078,19772.758};
+			name="marker_18";
+			text="Platoon - 50Mhz";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=1231;
+			atlOffset=-79.227829;
+		};
+		class Item99
+		{
+			dataType="Marker";
+			position[]={21344.922,71.879997,19605.82};
+			name="marker_20";
+			text="Possum 1 - 70Mhz";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=1234;
+		};
+		class Item100
+		{
+			dataType="Marker";
+			position[]={21340.1,70.567909,19405.348};
+			name="marker_23";
+			text="Possum 2 - 80Mhz";
+			type="mil_dot";
+			colorName="ColorWEST";
+			id=1237;
 		};
 	};
 	class Connections
